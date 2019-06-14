@@ -1,0 +1,17 @@
+Stacks
+
+It's an element sequence of the same type in which the access of it, it is realized in only one place called Top: We see the access to the elements of the stacks are realized always on only one end. The operations that characterize the stack are:
+• Add a new element to the top (Push)
+• Take out an element from the top (Pop)
+One form of seeing this data structure is like a book stack where i can only get the book that's in the top, or i can put more books over the same, but the books that hold on the stack are not accesible, otherwise it would be taken down.
+
+•Stacks that contains return directions:
+When the code calls a method, the direction of the first instruction that follows the call it's inserted in the top of the stack of method calls of the current thread. When the method executes a return statement, the address is removed from the top of the stack and the execution continues to that direction. If a method calls another method, the stack's LIFO behavior ensures that the return statement of the second method transfieres the execution of the first one. As a result a stack "remembers" the return directions of the called methods.
+•Stacks that contain all the parameters of the called method and local variables:
+When a method is called, the JVM reserves memory close to the return direction and stores every parameter of the called method and local variables of that method. If the method is a method of exemplary, one of the parameters that store in the stack are the "this" reference of the current object.
+
+The Java interface that defines the object class and methods are the following file: Example/Stack.java
+
+Two stack implementations are through arrays and linked lists.
+
+• Stack implementations through arrays in the file: Example/StackArray.java
