@@ -1,4 +1,4 @@
-Stacks
+﻿Stacks
 
 It's an element sequence of the same type in which the access of it, it is realized in only one place called Top: We see the access to the elements of the stacks are realized always on only one end. The operations that characterize the stack are:
 • Add a new element to the top (Push)
@@ -14,4 +14,4 @@ The Java interface that defines the object class and methods are the following f
 
 Two stack implementations are through arrays and linked lists.
 
-• Stack implementations through arrays in the file: Example/StackArray.java
+• Stack implementations through arrays in the file: Example/StackArray.java 
