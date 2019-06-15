@@ -8,9 +8,9 @@ namespace BinaryTreeExample
 {
     public class TreeNode
     {
-        int data;
-        String name;
-        TreeNode LeftSon, RightSon;
+        public int data;
+        public String name;
+        public TreeNode LeftSon, RightSon;
         public TreeNode(int d, String nam)
         {
             this.data = d;
