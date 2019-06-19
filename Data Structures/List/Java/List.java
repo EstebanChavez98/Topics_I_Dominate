@@ -35,5 +35,52 @@ public class List {
 			travel = travel.next;
 		}
 	}
+	public int deletefromStart() {
+		int element = start.data;
+		if(start == end) {
+			start = null;
+			end = null;
+		}else {
+			start = start.next;
+		}
+		return element;
+	}
+	public int deletefromEnd() {
+		int element = end.data;
+		if(start == end) {
+			start = end = null;
+		}else {
+			Node temp = start;
+			while(temp.next != end) {
+				temp = temp.next;
+			}
+			end = temp;
+			end.next = null;
+		}
+		return element;
+	}
+	public void delete(int element) {
+		if(!isEmpty()) {
+			if(start == end && element == start.data) {
+				start = end = null;
+			}else if (element == start.data){
+				start = start.next;
+			}else {
+				Node previous, temp;
+				previous = start;
+				temp = start.next;
+				while(temp != null && temp.data != element) {
+					previous = previous.next;
+					temp = temp.next;
+				}
+				if(temp != null) {
+					previous.next = temp.next;
+					if(temp == end) {
+						end = previous;
+					}
+				}
+			}
+		}
+	}
 }
 
