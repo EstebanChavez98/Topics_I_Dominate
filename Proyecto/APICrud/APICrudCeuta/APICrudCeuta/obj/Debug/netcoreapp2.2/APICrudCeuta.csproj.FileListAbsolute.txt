@@ -1,0 +1,14 @@
+C:\Users\EstebanChavezVerdin\OneDrive - JORGE LUIS FELIX CHAIDEZ\Escritorio\APICrud\APICrudCeuta\APICrudCeuta\bin\Debug\netcoreapp2.2\APICrudCeuta.deps.json
+C:\Users\EstebanChavezVerdin\OneDrive - JORGE LUIS FELIX CHAIDEZ\Escritorio\APICrud\APICrudCeuta\APICrudCeuta\bin\Debug\netcoreapp2.2\APICrudCeuta.runtimeconfig.json
+C:\Users\EstebanChavezVerdin\OneDrive - JORGE LUIS FELIX CHAIDEZ\Escritorio\APICrud\APICrudCeuta\APICrudCeuta\bin\Debug\netcoreapp2.2\APICrudCeuta.runtimeconfig.dev.json
+C:\Users\EstebanChavezVerdin\OneDrive - JORGE LUIS FELIX CHAIDEZ\Escritorio\APICrud\APICrudCeuta\APICrudCeuta\bin\Debug\netcoreapp2.2\APICrudCeuta.dll
+C:\Users\EstebanChavezVerdin\OneDrive - JORGE LUIS FELIX CHAIDEZ\Escritorio\APICrud\APICrudCeuta\APICrudCeuta\bin\Debug\netcoreapp2.2\APICrudCeuta.pdb
+C:\Users\EstebanChavezVerdin\OneDrive - JORGE LUIS FELIX CHAIDEZ\Escritorio\APICrud\APICrudCeuta\APICrudCeuta\obj\Debug\netcoreapp2.2\APICrudCeuta.csprojAssemblyReference.cache
+C:\Users\EstebanChavezVerdin\OneDrive - JORGE LUIS FELIX CHAIDEZ\Escritorio\APICrud\APICrudCeuta\APICrudCeuta\obj\Debug\netcoreapp2.2\APICrudCeuta.csproj.CoreCompileInputs.cache
+C:\Users\EstebanChavezVerdin\OneDrive - JORGE LUIS FELIX CHAIDEZ\Escritorio\APICrud\APICrudCeuta\APICrudCeuta\obj\Debug\netcoreapp2.2\APICrudCeuta.RazorAssemblyInfo.cache
+C:\Users\EstebanChavezVerdin\OneDrive - JORGE LUIS FELIX CHAIDEZ\Escritorio\APICrud\APICrudCeuta\APICrudCeuta\obj\Debug\netcoreapp2.2\APICrudCeuta.RazorAssemblyInfo.cs
+C:\Users\EstebanChavezVerdin\OneDrive - JORGE LUIS FELIX CHAIDEZ\Escritorio\APICrud\APICrudCeuta\APICrudCeuta\obj\Debug\netcoreapp2.2\APICrudCeuta.AssemblyInfoInputs.cache
+C:\Users\EstebanChavezVerdin\OneDrive - JORGE LUIS FELIX CHAIDEZ\Escritorio\APICrud\APICrudCeuta\APICrudCeuta\obj\Debug\netcoreapp2.2\APICrudCeuta.AssemblyInfo.cs
+C:\Users\EstebanChavezVerdin\OneDrive - JORGE LUIS FELIX CHAIDEZ\Escritorio\APICrud\APICrudCeuta\APICrudCeuta\obj\Debug\netcoreapp2.2\APICrudCeuta.RazorTargetAssemblyInfo.cache
+C:\Users\EstebanChavezVerdin\OneDrive - JORGE LUIS FELIX CHAIDEZ\Escritorio\APICrud\APICrudCeuta\APICrudCeuta\obj\Debug\netcoreapp2.2\APICrudCeuta.dll
+C:\Users\EstebanChavezVerdin\OneDrive - JORGE LUIS FELIX CHAIDEZ\Escritorio\APICrud\APICrudCeuta\APICrudCeuta\obj\Debug\netcoreapp2.2\APICrudCeuta.pdb

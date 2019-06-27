@@ -1,0 +1,11 @@
+Requerimiento 1: Ser Web en formato API y con un cliente Vue.js que consuma la Web API
+
+Requerimiento 2: Se va a realizar un CRUD
+
+Requerimiento 3: Debe de poder capturar el nombre de la persona visitante, el nombre del departamento a visitar y la persona que va a visitar, y la direccion IP a la computadora donde se le va a dar acceso.
+
+Requerimiento 4: Los la IP capturada debe de ser guardados en una direccion especifica en formato TXT, el resto de datos se guardara en una tabla de una base de datos para consulta.
+
+Requerimiento 5: Se debe de realizar una pantalla para editar los registros del TXT de tal forma que se pueda eliminar, agregar o editar los registros de las direcciones IP. Al mismo tiempo debe abrir una pantalla para consultar el historico de las visitas.
+
+Lizbeth&Gerencia&Jorge&192.168.200.105
