@@ -8,4 +8,3 @@ Requerimiento 4: Los la IP capturada debe de ser guardados en una direccion espe
 
 Requerimiento 5: Se debe de realizar una pantalla para editar los registros del TXT de tal forma que se pueda eliminar, agregar o editar los registros de las direcciones IP. Al mismo tiempo debe abrir una pantalla para consultar el historico de las visitas.
 
-Lizbeth&Gerencia&Jorge&192.168.200.105

@@ -63,7 +63,7 @@ namespace APICrudCeuta.Data
 
         public string ModificarIP(string _nombre, string _ip)
         {
-            string respuestaBD, patternIP = @"\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b";
+            string respuestaBD, anteriorIP="", patternIP = @"\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b";
             SqlConnection conection = new SqlConnection(con.conexionDESK);
             if (!(string.IsNullOrWhiteSpace(_nombre) || string.IsNullOrWhiteSpace(_ip)))
             {
@@ -76,14 +76,24 @@ namespace APICrudCeuta.Data
 
                     cmd.Parameters.AddWithValue("@nom", _nombre);
                     cmd.Parameters.AddWithValue("@ip", _ip);
+                    cmd.Parameters.AddWithValue("@anteriorip", anteriorIP);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.CommandText = sql;
                     cmd.Connection = conection;
-
-                    respuestaBD = cmd.ExecuteNonQuery() == -1 ? "No se encontro ningun dato" : "Modificacion exitosa en la Base de datos";
-                    if(respuestaBD != "No se encontro ningun dato")
+                    SqlDataReader lector = null;
+                    lector = cmd.ExecuteReader();
+                    if (lector.HasRows)
                     {
-                        ModificarIPText(_ip);
+                        while (lector.Read())
+                        {
+                            anteriorIP = lector.GetValue(0).ToString();
+                        }
+                        ModificarIPText(_ip, anteriorIP);
+                        respuestaBD = "Registro Modificado";
+                    }
+                    else
+                    {
+                        respuestaBD = "No se hizo ningun cambio";
                     }
                     conection.Close();
                 }
@@ -99,7 +109,7 @@ namespace APICrudCeuta.Data
             return respuestaBD;
         }
         
-        public void ModificarIPText(string ip)
+        public void ModificarIPText(string ip, string anteriorIP)
         {
             
         }
