@@ -16,7 +16,7 @@ end
 go
 
 
-alter proc sp_modificarIP @nom varchar(200), @ip varchar(20)
+alter proc sp_modificarIP @nom varchar(200), @ip varchar(20), @anteriorip varchar(20) output
 as
 begin
 	if (select count(*) from Usuarios) != 0
@@ -25,11 +25,16 @@ begin
 			declare @ipCompare varchar(20)
 			select @ipCompare = IP from Usuarios where IP = @ip
 			if(@ipCompare is null)
+				select @anteriorip = IP from Usuarios where Nombre = @nom
 				update Usuarios set ip = @ip where Nombre = @nom
 		end
 end
 go
 
 select * from Usuarios
+
+declare @return varchar(20)
+exec sp_modificarIP 'Esteban Chavez', '192.168.200.108', @return output
+select @return
 
 drop table Usuarios
