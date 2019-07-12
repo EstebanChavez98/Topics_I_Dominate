@@ -3,17 +3,22 @@ id int primary key identity(1,1) not null,
 Nombre varchar(200) not null,
 Departamento varchar(200) not null,
 Persona varchar(200) not null,
-IP varchar(20)
+IP varchar(20),
+Inicio datetime not null,
+Final datetime not null
 )
 
 go
-create proc sp_agregarUsuario @nom varchar(200), @depto varchar(200), @persona varchar(200), @ip varchar(20)
+alter proc sp_agregarUsuario @nom varchar(200), @depto varchar(200), @persona varchar(200), @ip varchar(20), @horas int
 as
 begin
-	if (@ip != (select IP from Usuarios where IP = @ip)) or (select count(*) from Usuarios) = 0
-		insert into Usuarios values(@nom, @depto, @persona, @ip)
+	declare @fechaFinal datetime
+	select @fechaFinal = dateadd(hh,@horas, SYSDATETIME()) 
+	insert into Usuarios values(@nom, @depto, @persona, @ip, SYSDATETIME(), @fechaFinal)
 end
 go
+
+exec sp_agregarUsuario 'Esteban Chavez', 'Gerencia', 'Jorge Felix', '192.168.200.201', 78
 
 
 alter proc sp_modificarIP @nom varchar(200), @ip varchar(20), @anteriorip varchar(20) output
@@ -33,8 +38,5 @@ go
 
 select * from Usuarios
 
-declare @return varchar(20)
-exec sp_modificarIP 'Esteban Chavez', '192.168.200.108', @return output
-select @return
-
 drop table Usuarios
+
