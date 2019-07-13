@@ -12,11 +12,11 @@ namespace APICrudCeuta.Data
     public class ValuesData
     {
         Conexion con = new Conexion();
-        public string GuardarDatosPersona(string _nombre, string _depto, string _persona, string _ip, int _horas)
+        public string GuardarDatosPersona(string _nombre, string _depto, string _persona, string _ip, string _inicialFecha, string _inicialHora, string _finalFecha, string _finalHora)
         {
             string request, patternIP = @"\b((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b";
             SqlConnection conection = new SqlConnection(con.conexionDESK);
-            if (!(string.IsNullOrWhiteSpace(_nombre) || string.IsNullOrWhiteSpace(_depto) || string.IsNullOrWhiteSpace(_persona) || string.IsNullOrWhiteSpace(_ip) || _horas == 0))
+            if (!(string.IsNullOrWhiteSpace(_nombre) || string.IsNullOrWhiteSpace(_depto) || string.IsNullOrWhiteSpace(_persona) || string.IsNullOrWhiteSpace(_ip) || string.IsNullOrWhiteSpace(_inicialFecha) || string.IsNullOrWhiteSpace(_inicialHora) || string.IsNullOrWhiteSpace(_finalFecha) || string.IsNullOrWhiteSpace(_finalHora)))
             {
                 Match match = Regex.Match(_ip, patternIP);
                 if (match.Success)
@@ -29,7 +29,10 @@ namespace APICrudCeuta.Data
                     cmd.Parameters.AddWithValue("@depto", _depto);
                     cmd.Parameters.AddWithValue("@persona", _persona);
                     cmd.Parameters.AddWithValue("@ip", _ip);
-                    cmd.Parameters.AddWithValue("@horas", _horas);
+                    cmd.Parameters.AddWithValue("@InicioFecha", _inicialFecha);
+                    cmd.Parameters.AddWithValue("@InicioHora", _inicialHora);
+                    cmd.Parameters.AddWithValue("@FinalFecha", _finalFecha);
+                    cmd.Parameters.AddWithValue("@FinalHora", _finalHora);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.CommandText = sql;
                     cmd.Connection = conection;

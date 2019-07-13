@@ -34,8 +34,10 @@ const app = new Vue({
         dep: '',
         person: '',
         ip: '',
-        horas:Int32Array = 0,
-        showModal: false,
+        fechaInic: '',
+        fechaFin: '',
+        horaInic: '',
+        horaFin: '',
         modalVisible: false,
         modalConfig: {
             visible: false,
@@ -46,7 +48,7 @@ const app = new Vue({
     },
     methods:{
         crearVisita() {
-            axios.get(`${RESOURCE_NAME}/${this.name}&${this.dep}&${this.person}&${this.ip}&${this.horas}&`)
+            axios.get(`${RESOURCE_NAME}/${this.name}&${this.dep}&${this.person}&${this.ip}&${this.fechaInic}&${this.horaInic}&${this.fechaFin}&${this.horaFin}&`)
             .then(response => this.modalConfig.info = response.data )
             this.openModal();
         },

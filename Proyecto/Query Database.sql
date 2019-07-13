@@ -9,31 +9,19 @@ Final datetime not null
 )
 
 go
-alter proc sp_agregarUsuario @nom varchar(200), @depto varchar(200), @persona varchar(200), @ip varchar(20), @horas int
+alter proc sp_agregarUsuario @nom varchar(200), @depto varchar(200), @persona varchar(200), @ip varchar(20), @InicioFecha varchar(20), @InicioHora varchar(20), @FinalFecha varchar(20), @FinalHora varchar(20)
 as
 begin
-	declare @fechaFinal datetime
-	select @fechaFinal = dateadd(hh,@horas, SYSDATETIME()) 
-	insert into Usuarios values(@nom, @depto, @persona, @ip, SYSDATETIME(), @fechaFinal)
+	declare @Inic datetime, @Fin datetime, @I varchar(20), @F varchar(20)
+	select @I = replace(@InicioFecha, '-', '')
+	select @F = replace(@FinalFecha, '-', '')
+	select @Inic = convert(datetime, @I+' '+@InicioHora)
+	select @Fin = convert(datetime, @F+' '+@FinalHora)
+	insert into Usuarios values(@nom, @depto, @persona, @ip, @Inic, @Fin)
 end
 go
 
-exec sp_agregarUsuario 'Esteban Chavez', 'Gerencia', 'Jorge Felix', '192.168.200.201', 78
-
-
-alter proc sp_modificarIP @nom varchar(200), @ip varchar(20), @anteriorip varchar(20) output
-as
-begin
-	if (select count(*) from Usuarios) != 0
-		if @nom = (select Nombre from Usuarios where Nombre = @nom)
-		begin
-			declare @ipCompare varchar(20)
-			select @ipCompare = IP from Usuarios where IP = @ip
-			if(@ipCompare is null)
-				select @anteriorip = IP from Usuarios where Nombre = @nom
-				update Usuarios set ip = @ip where Nombre = @nom
-		end
-end
+exec sp_agregarUsuario 'Esteban Chavez', 'Gerencia', 'Jorge Felix', '192.168.200.201', '2019-07-13', '12:45', '2019-07-15', '18:32'
 go
 
 select * from Usuarios

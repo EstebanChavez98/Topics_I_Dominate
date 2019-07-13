@@ -12,6 +12,9 @@ namespace APICrudCeuta.Object
         public String Departamento { get; set; }
         public String Persona { get; set; }
         public String IP { get; set; }
-        public int Horas { get; set; }
+        public String InicialFecha { get; set; }
+        public String InicialHora { get; set; }
+        public String FinalFecha { get; set; }
+        public String FinalHora { get; set; }
     }
 }

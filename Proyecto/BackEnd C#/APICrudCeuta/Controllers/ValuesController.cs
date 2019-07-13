@@ -18,10 +18,10 @@ namespace APICrudCeuta.Controllers
     {
         ValuesData data = new ValuesData();
         // GET api/values
-        [HttpGet("{visita.Nombre}&{visita.Departamento}&{visita.Persona}&{visita.IP}&{visita.Horas}&")]
+        [HttpGet("{visita.Nombre}&{visita.Departamento}&{visita.Persona}&{visita.IP}&{visita.InicialFecha}&{visita.InicialHora}&{visita.FinalFecha}&{visita.FinalHora}&")]
         public string GuardarDatos([FromRoute] VisitasModel visita)
         {
-            return data.GuardarDatosPersona(visita.Nombre, visita.Departamento, visita.Persona, visita.IP, visita.Horas);
+            return data.GuardarDatosPersona(visita.Nombre, visita.Departamento, visita.Persona, visita.IP, visita.InicialFecha, visita.InicialHora, visita.FinalFecha, visita.FinalHora);
         }
 
         [HttpGet("[action]/{nombre}&{ip}&")]
