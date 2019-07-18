@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EstebanChavezVerdin\\OneDrive - JORGE LUIS FELIX CHAIDEZ\\Escritorio\\APICrud\\APICrudCeuta\\APICrudCeuta\\APICrudCeuta.csproj": {}
+    "C:\\Users\\EstebanChavezVerdin\\OneDrive - JORGE LUIS FELIX CHAIDEZ\\Escritorio\\Topics_I_Dominate\\Proyecto\\BackEnd C#\\APICrudCeuta\\APICrudCeuta.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EstebanChavezVerdin\\OneDrive - JORGE LUIS FELIX CHAIDEZ\\Escritorio\\APICrud\\APICrudCeuta\\APICrudCeuta\\APICrudCeuta.csproj": {
+    "C:\\Users\\EstebanChavezVerdin\\OneDrive - JORGE LUIS FELIX CHAIDEZ\\Escritorio\\Topics_I_Dominate\\Proyecto\\BackEnd C#\\APICrudCeuta\\APICrudCeuta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EstebanChavezVerdin\\OneDrive - JORGE LUIS FELIX CHAIDEZ\\Escritorio\\APICrud\\APICrudCeuta\\APICrudCeuta\\APICrudCeuta.csproj",
+        "projectUniqueName": "C:\\Users\\EstebanChavezVerdin\\OneDrive - JORGE LUIS FELIX CHAIDEZ\\Escritorio\\Topics_I_Dominate\\Proyecto\\BackEnd C#\\APICrudCeuta\\APICrudCeuta.csproj",
         "projectName": "APICrudCeuta",
-        "projectPath": "C:\\Users\\EstebanChavezVerdin\\OneDrive - JORGE LUIS FELIX CHAIDEZ\\Escritorio\\APICrud\\APICrudCeuta\\APICrudCeuta\\APICrudCeuta.csproj",
+        "projectPath": "C:\\Users\\EstebanChavezVerdin\\OneDrive - JORGE LUIS FELIX CHAIDEZ\\Escritorio\\Topics_I_Dominate\\Proyecto\\BackEnd C#\\APICrudCeuta\\APICrudCeuta.csproj",
         "packagesPath": "C:\\Users\\EstebanChavezVerdin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EstebanChavezVerdin\\OneDrive - JORGE LUIS FELIX CHAIDEZ\\Escritorio\\APICrud\\APICrudCeuta\\APICrudCeuta\\obj\\",
+        "outputPath": "C:\\Users\\EstebanChavezVerdin\\OneDrive - JORGE LUIS FELIX CHAIDEZ\\Escritorio\\Topics_I_Dominate\\Proyecto\\BackEnd C#\\APICrudCeuta\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

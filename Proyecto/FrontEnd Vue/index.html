@@ -6,23 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Testing</title>
 </head>
-<body>
-    <div id="app" class="container">   
-        <form action="" class="">
-            Nombre del Visitante:<input v-model="name" @keyup.enter="crearVisita" type="text" class="form-control" placeholder="">
-            Departamento:<input v-model="dep" @keyup.enter="crearVisita" type="text" name="edad" placeholder="" class="form-control">
-            Persona a visitar:<input v-model="person" @keyup.enter="crearVisita" type="text" name="edad" placeholder="" class="form-control">
-            IP:<input v-model="ip" @keyup.enter="crearVisita" type="text" name="edad" placeholder="" class="form-control">
+<body class="bg-secondary">
+        <div class="navbar navbar-primary bg-primary shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <h4><strong style="color: white;">Creación Ticket</strong></h4>
+            </div>
+        </div> 
+        <br>     
+    <div id="app" class="container text-white"> 
+        
+        <h4 style="text-align: center;">Registro de Visitas</h4>
+        <form action="" class="text-white">
+            Nombre del Visitante:<input v-model="name" @keyup.enter="crearVisita" type="text" class="form-control" placeholder="Nombre">
+            Departamento:<input v-model="dep" @keyup.enter="crearVisita" type="text" name="edad" placeholder="Departamento a visitar" class="form-control">
+            Persona a visitar:<input v-model="person" @keyup.enter="crearVisita" type="text" name="edad" placeholder="Nombre completo" class="form-control">
+            IP:<input v-model="ip" @keyup.enter="crearVisita" type="text" name="edad" placeholder="Ej.: 192.168.0.1" class="form-control">
             Fecha y Hora de Inicio: <br><input v-model="fechaInic" @keyup.enter="crearVisita" class="pull-right" type="date" > <input v-model="horaInic" type="time"><br>
             Fecha y Hora Final: <br><input v-model="fechaFin" class="pull-right" type="date"> <input v-model="horaFin" type="time"><br>
             <!-- Boton -->
 
-            <input @click="crearVisita" type="button" value="Añadir" class="btn btn-success">
+            <input @click="crearVisita" type="button" value="Añadir" class="btn btn-primary margin">
+            
             <e-modal v-bind:data="modalConfig"></e-modal>
         </form>
-
-        
     </div>
+    <br>
+    <footer class="bg-primary text-white">
+        <br>
+            <div class="container">
+                <p>&copy; 2019 Chavez. All rights reserved.</p>
+            </div>
+        <br>
+    </footer>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
