@@ -23,8 +23,8 @@ go
 
 exec sp_agregarUsuario 'Esteban Chavez', 'Gerencia', 'Jorge Felix', '192.168.200.201', '2019-07-13', '12:45', '2019-07-15', '18:32'
 go
+exec sp_agregarUsuario 'Rosa Andrade', 'Sistemas', 'Antonio Chavez', '192.168.200.111', '2019-07-13', '14:05', '2019-07-13', '14:06'
 
 select * from Usuarios
 
 drop table Usuarios
-
