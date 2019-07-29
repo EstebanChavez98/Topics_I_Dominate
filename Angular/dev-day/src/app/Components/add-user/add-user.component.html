@@ -1,0 +1,30 @@
+<div class="container" [ngClass]="isDisabled ? 'bg-primary' : 'bg-secondary'">
+    <form [formGroup]="addUserForm" (ngSubmit)="saveUser()">
+        <div class="form-group">
+            <label >Nombre</label>
+            <input type="text" formControlName="firstName" class="form-control" id="NombreInput" aria-describedby="nameHelp" placeholder="Ingrese su nombre" [disabled]="isDisabled">
+        </div>
+        <div class="form-group">
+            <label >Apellido</label>
+            <input type="text" formControlName="lastName" class="form-control" id="ApellidoInput" aria-describedby="lastnameHelp" placeholder="Ingrese su apellido">
+        </div>
+         <div class="form-group">
+            <label >Edad</label>
+            <input type="number" formControlName="age" class="form-control" id="EdadInput" aria-describedby="emailHelp" placeholder="Ingrese su edad">
+         </div>
+        <div class="form-group">
+          <label >Correo</label>
+          <input type="email" formControlName="email" class="form-control" id="CorreoInput" placeholder="Ingrese su correo">
+        </div>
+        <div class="form-group">
+                <label >Celular</label>
+                <input type="text" formControlName="cellphone" class="form-control" id="CelularInput" aria-describedby="emailHelp" placeholder="Ingrese su numero de celular">
+        </div>
+        <!--<div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>-->
+        <button type="submit" class="btn btn-primary" style="margin-left: 30px;">Guardar</button>
+        <button (click)="addUserForm.reset()" type="button" class="btn btn-secondary" style="margin-left: 30px;">Cancelar</button>
+    </form>
+    </div>

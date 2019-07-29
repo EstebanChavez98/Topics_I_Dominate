@@ -1,0 +1,9 @@
+<ul class="list-group">
+    <div class="container:ul list-group" *ngFor="let user of userList">
+        <li class="list-group-item"><b>Nombre: {{ user.firstName }} {{user.lastName}}, {{user.age}}</b></li>
+    </div>
+
+    <!--<li class="list-group-item" *ngFor="let user of userList">
+        <h2>Nombre: {{ user.firstName }} {{user.lastName}}, {{user.age}}<br></h2>
+    </li>-->
+</ul>
